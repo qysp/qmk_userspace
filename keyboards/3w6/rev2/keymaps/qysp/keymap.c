@@ -21,7 +21,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 enum layers
 {
     _ALPHA_QWERTY = 0,
-    _ALPHA_QWERTY_HRM,
     _ALPHA_COLEMAK_DH,
     _SYM,
     _NAV,
@@ -37,22 +36,11 @@ enum custom_keycodes
     PASTE,
 };
 
-#define DF_QWRTHRM DF(_ALPHA_QWERTY_HRM)
 #define DF_QWRT DF(_ALPHA_QWERTY)
 #define DF_CLMK DF(_ALPHA_COLEMAK_DH)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_ALPHA_QWERTY] = LAYOUT(
-        KC_Q,         KC_W,         KC_E,        KC_R,          KC_T,                                    KC_Y,        KC_U,           KC_I,         KC_O,         KC_P,
-        // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-        KC_A,         KC_S,         KC_D,        KC_F,          KC_G,                                    KC_H,        KC_J,           KC_K,         KC_L,         KC_SCLN,
-        // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-        LSFT_T(KC_Z), KC_X,         KC_C,        KC_V,          KC_B,                                    KC_N,        KC_M,           KC_COMM,      KC_DOT,       RSFT_T(KC_SLSH),
-        // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-                             LCTL_T(KC_LGUI), LT(_NAV, KC_TAB), LT(_NUM, KC_SPC),               LALT_T(KC_ENT), LT(_SYM, KC_BSPC), XXXXXXX
-        // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    ),
-    [_ALPHA_QWERTY_HRM] = LAYOUT(
         KC_Q,         KC_W,         KC_E,         KC_R,         KC_T,                                    KC_Y,         KC_U,          KC_I,         KC_O,         KC_P,
         // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         LGUI_T(KC_A), LALT_T(KC_S), LCTL_T(KC_D), LSFT_T(KC_F), KC_G,                                    KC_H,         RSFT_T(KC_J),  RCTL_T(KC_K), LALT_T(KC_L), RGUI_T(KC_SCLN),
@@ -113,11 +101,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     ),
     [_MISC] = LAYOUT(
-        XXXXXXX,      KC_VOLD,      KC_MUTE,      KC_VOLU,      XXXXXXX,                                 XXXXXXX,      XXXXXXX,       DF_QWRTHRM, DF_QWRT,    DF_CLMK,
+        XXXXXXX,      KC_VOLD,      KC_MUTE,      KC_VOLU,      XXXXXXX,                                 XXXXXXX,      XXXXXXX,       XXXXXXX,    DF_QWRT,    DF_CLMK,
         // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-        KC_MPRV,      KC_MPLY,      KC_MSTP,      KC_MNXT,      XXXXXXX,                                 XXXXXXX,      KC_BTN1,       KC_BTN2,    XXXXXXX,    XXXXXXX,
+        XXXXXXX,      KC_MPRV,      KC_MSTP,      KC_MNXT,      KC_MPLY,                                 XXXXXXX,      KC_BTN1,       KC_BTN2,    XXXXXXX,    XXXXXXX,
         // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-        XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,                                 XXXXXXX,      XXXXXXX,       XXXXXXX,    XXXXXXX,    XXXXXXX,
+        XXXXXXX,      DT_DOWN,      DT_PRNT,      DT_UP,        XXXXXXX,                                 XXXXXXX,      XXXXXXX,       XXXXXXX,    XXXXXXX,    XXXXXXX,
         // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
                                                        XXXXXXX, XXXXXXX, XXXXXXX,               XXXXXXX, XXXXXXX, XXXXXXX
         // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
