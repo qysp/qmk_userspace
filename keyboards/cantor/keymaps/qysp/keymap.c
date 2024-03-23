@@ -74,11 +74,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_MISC] = LAYOUT_split_3x6_3(
       //--------------------------------------------------------------------------         ---------------------------------------------------------------------------------
-        QK_BOOT, XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,                                           XXXXXXX, KC_BTN1, KC_BTN2, XXXXXXX, DF_QWRT, DF_CLMK,
+        QK_BOOT, XXXXXXX,  KC_VOLD,  KC_MUTE, KC_VOLU,  XXXXXXX,                                           XXXXXXX, KC_BTN1, KC_BTN2, XXXXXXX, DF_QWRT, DF_CLMK,
       //--------------------------------------------------------------------------         ---------------------------------------------------------------------------------
-        XXXXXXX, XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,                                           KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, XXXXXXX, XXXXXXX,
+        XXXXXXX, XXXXXXX,  KC_MPRV,  KC_MSTP, KC_MNXT,  KC_MPLY,                                           KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, XXXXXXX, XXXXXXX,
       //--------------------------------------------------------------------------         ---------------------------------------------------------------------------------
-        XXXXXXX, XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,                                           XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX, XXXXXXX,  DT_DOWN,  DT_PRNT, DT_UP,    XXXXXXX,                                           XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
       //--------------------------------------------------------------------------         ---------------------------------------------------------------------------------
                                                 XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX
       //--------------------------------------------------------------------------         ---------------------------------------------------------------------------------
